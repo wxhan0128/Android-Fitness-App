@@ -1,0 +1,146 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.ynu.healthyfriendv05.SlimepageActivity" >
+
+    <LinearLayout
+        android:id="@+id/slim_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/sports"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0.1dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_sports" />
+
+        <ImageView
+            android:id="@+id/diet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/select_diet" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/slim_fragment_place"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/slim_options"
+        android:layout_alignParentTop="true" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/slimtable_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/slim_options"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/my_sports"
+            style="@style/big_light_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_middle_gray"
+            android:text="@string/my_sports" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/darkline" />
+
+        <ListView
+            android:id="@+id/today_sport_listview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1" >
+        </ListView>
+
+        <TextView
+            android:id="@+id/my_diet"
+            style="@style/big_light_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_middle_gray"
+            android:text="@string/my_diet" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/darkline" />
+
+        <ListView
+            android:id="@+id/today_diet_listview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1" >
+        </ListView>
+
+        <TextView
+            android:id="@+id/calories_balance"
+            style="@style/big_light_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_middle_gray"
+            android:text="@string/calories_balance" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/darkline" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/my_incalories"
+                    style="@style/normal_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_incalories" />
+
+                <TextView
+                    android:id="@+id/my_incalories_value"
+                    style="@style/normal_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/my_outcalories"
+                    style="@style/normal_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_outcalories" />
+
+                <TextView
+                    android:id="@+id/my_outcalories_value"
+                    style="@style/normal_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+</RelativeLayout>

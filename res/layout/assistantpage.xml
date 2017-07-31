@@ -1,0 +1,273 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_gray"
+    tools:context="com.ynu.healthyfriendv05.AssistantpageActivity" >
+
+    <FrameLayout
+        android:id="@+id/assistant_fragment_place"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/assistant_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0.1dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_home" />
+
+        <ImageView
+            android:id="@+id/diary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/select_diary" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/whole_assistant_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/assistant_options"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <LinearLayout
+            android:id="@+id/assistant_panel01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/layout_dark_border"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/temperature_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="5dp"
+                android:src="@drawable/temperature" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:shrinkColumns="0" >
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/temperature"
+                        style="@style/normal_light_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/temperature" />
+
+                    <TextView
+                        android:id="@+id/temperature_value"
+                        style="@style/normal_light_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/humidity"
+                        style="@style/normal_light_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/humidity" />
+
+                    <TextView
+                        android:id="@+id/humidity_value"
+                        style="@style/normal_light_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/line" />
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/comfortable"
+                        style="@style/normal_light_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/comfortable" />
+
+                    <TextView
+                        android:id="@+id/comfortable_value"
+                        style="@style/normal_light_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/suitable_sport"
+                        style="@style/normal_light_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/suitable_sport" />
+
+                    <TextView
+                        android:id="@+id/suitable_sport_value"
+                        style="@style/normal_light_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/assistant_panel02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/layout_dark_border"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/assistant_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="5dp"
+                android:src="@drawable/assistant" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:shrinkColumns="0" >
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/goal_days"
+                        style="@style/normal_light_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/goal_days" />
+
+                    <TextView
+                        android:id="@+id/days_value"
+                        style="@style/normal_light_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/aver_weight"
+                        style="@style/normal_light_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/average_weight" />
+
+                    <TextView
+                        android:id="@+id/aver_weight_value"
+                        style="@style/normal_light_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/line" />
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/aver_calories_burn"
+                        style="@style/normal_light_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/average_calories_burn" />
+
+                    <TextView
+                        android:id="@+id/aver_calories_value"
+                        style="@style/normal_light_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/today_totalcalories_burn"
+                        style="@style/normal_light_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/today_totalcalories_burn" />
+
+                    <TextView
+                        android:id="@+id/totalcalories_value"
+                        style="@style/normal_light_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/assistant_panel03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/healthydiary"
+                style="@style/big_light_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/healthydiary" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/line" />
+
+            <ListView
+                android:id="@+id/diary_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/super_dark_gray"
+                android:divider="@color/dark_gray"
+                android:dividerHeight="2dp" >
+            </ListView>
+
+            <TextView
+                android:id="@+id/emptyShow"
+                style="@style/normal_light_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/empty_value" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/setting_update_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="false"
+        android:background="@drawable/backgroud_update"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:id="@+id/other_options4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/cancel_change"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0.1dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_back" />
+
+        <ImageView
+            android:id="@+id/save_change"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/select_save" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/other_options4"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scrollbars="vertical" >
+
+            <TableLayout
+                android:id="@+id/change_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:shrinkColumns="0" >
+
+                <TableRow
+                    android:paddingBottom="5dp"
+                    android:paddingRight="@dimen/activity_horizontal_margin" >
+
+                    <TextView
+                        android:id="@+id/change_username"
+                        style="@style/normal_dark_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/username" />
+
+                    <EditText
+                        android:id="@+id/change_username_input"
+                        style="@style/inputedit_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/please_input" />
+                </TableRow>
+
+                <TableRow
+                    android:paddingBottom="5dp"
+                    android:paddingRight="@dimen/activity_horizontal_margin" >
+
+                    <TextView
+                        android:id="@+id/change_birthday"
+                        style="@style/normal_dark_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/birthday" />
+
+                    <EditText
+                        android:id="@+id/change_birthday_input"
+                        style="@style/inputedit_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:inputType="none" >
+                    </EditText>
+                </TableRow>
+
+                <TableRow android:paddingBottom="5dp" >
+
+                    <TextView
+                        android:id="@+id/change_gender"
+                        style="@style/normal_dark_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gender" />
+
+                    <RadioGroup
+                        android:id="@+id/change_gender_rg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/change_male"
+                            style="@style/normal_dark_text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="@string/male" />
+
+                        <RadioButton
+                            android:id="@+id/change_female"
+                            style="@style/normal_dark_text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/female" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow android:paddingBottom="5dp" >
+
+                    <TextView
+                        android:id="@+id/change_weight"
+                        style="@style/normal_dark_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/weight" />
+
+                    <EditText
+                        android:id="@+id/change_weight_input"
+                        style="@style/inputnumber_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal" />
+
+                    <TextView
+                        android:id="@+id/change_weight_unit"
+                        style="@style/normal_dark_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/weight_unit" />
+                </TableRow>
+
+                <TableRow android:paddingBottom="5dp" >
+
+                    <TextView
+                        android:id="@+id/change_height"
+                        style="@style/normal_dark_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/height" />
+
+                    <EditText
+                        android:id="@+id/change_height_input"
+                        style="@style/inputnumber_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal" />
+
+                    <TextView
+                        android:id="@+id/change_height_unit"
+                        style="@style/normal_dark_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/height_unit" />
+                </TableRow>
+
+                <TableRow android:paddingBottom="5dp" >
+
+                    <TextView
+                        android:id="@+id/change_armlength"
+                        style="@style/normal_dark_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/armlength" />
+
+                    <EditText
+                        android:id="@+id/change_armlength_input"
+                        style="@style/inputnumber_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal" />
+
+                    <TextView
+                        android:id="@+id/change_armlength_unit"
+                        style="@style/normal_dark_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mile_unit" />
+                </TableRow>
+
+                <TableRow android:paddingBottom="5dp" >
+
+                    <TextView
+                        android:id="@+id/change_steplength"
+                        style="@style/normal_dark_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/steplength" />
+
+                    <EditText
+                        android:id="@+id/change_steplength_input"
+                        style="@style/inputnumber_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal" />
+
+                    <TextView
+                        android:id="@+id/change_steplength_unit"
+                        style="@style/normal_dark_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mile_unit" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/change_exercise_type"
+                        style="@style/normal_dark_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/exercise_type" />
+
+                    <Spinner
+                        android:id="@+id/change_type_choose"
+                        style="@style/inputspinner_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/change_occupation"
+                        style="@style/normal_dark_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/blank" />
+                </TableRow>
+
+                <TextView
+                    android:id="@+id/change_aims"
+                    style="@style/big_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/update_aims" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/darkline" />
+
+                <TableRow android:paddingBottom="5dp" >
+
+                    <TextView
+                        android:id="@+id/change_planweight"
+                        style="@style/normal_dark_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/plan_weight" />
+
+                    <EditText
+                        android:id="@+id/change_desweight_input"
+                        style="@style/inputnumber_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal" />
+
+                    <TextView
+                        android:id="@+id/change_desweight_unit"
+                        style="@style/normal_dark_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/weight_unit" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/change_plantime"
+                        style="@style/normal_dark_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/plan_time" />
+
+                    <EditText
+                        android:id="@+id/change_timeinput"
+                        style="@style/inputnumber_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal" />
+
+                    <TextView
+                        android:id="@+id/change_timeunit"
+                        style="@style/normal_dark_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/time_unit" />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ynu.healthyfriendv05"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon_logo"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Custom" >
+        <activity
+            android:name=".SplashpageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HostpageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ExercisepageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_exercisepage"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".InformationpageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_informationpage"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SlimepageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_slimepage"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".AssistantpageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_assistantpage"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service
+            android:name=".service.AerobicsFragmentService"
+            android:enabled="true"
+            android:permission="com.ynu.healthyfriendv05.service.PUSHUP_SERVICE_PERMISSION" >
+            <intent-filter>
+                <action android:name="com.ynu.healthyfriendv05.service.Aerobics_Service" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.RunFragmentService"
+            android:enabled="true"
+            android:permission="com.ynu.healthyfriendv05.service.RUN_SERVICE_PERMISSION" >
+            <intent-filter>
+                <action android:name="com.ynu.healthyfriendv05.service.Run_Service" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".GuidepageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_guidepage"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name=".SettingspageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_settingspage"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SearchDatapageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_search_datapage"
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+</manifest>

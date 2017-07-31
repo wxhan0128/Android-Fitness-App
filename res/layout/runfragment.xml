@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/run_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="false"
+        android:background="@drawable/background_run"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:id="@+id/run_panel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/layout_light_border"
+        android:padding="5dp" >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <TableRow android:gravity="center_horizontal" >
+
+                <TextView
+                    android:id="@+id/run_title"
+                    style="@style/super_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/step" />
+
+                <TextView
+                    android:id="@+id/run_num"
+                    style="@style/super_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow android:gravity="center_horizontal" >
+
+                <TextView
+                    android:id="@+id/distance_title"
+                    style="@style/super_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/distance" />
+
+                <TextView
+                    android:id="@+id/distance_values"
+                    style="@style/super_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow android:gravity="center_horizontal" >
+
+                <TextView
+                    android:id="@+id/run_calorie_title"
+                    style="@style/super_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/calorie_burn" />
+
+                <TextView
+                    android:id="@+id/run_calorie_burn"
+                    style="@style/super_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow android:gravity="center_horizontal" >
+
+                <TextView
+                    android:id="@+id/run_time_title"
+                    style="@style/super_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/play_time" />
+
+                <TextView
+                    android:id="@+id/run_time_count"
+                    style="@style/super_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow android:gravity="center_horizontal" >
+
+                <TextView
+                    android:id="@+id/run_goal"
+                    style="@style/super_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/numbertogoal" />
+
+                <TextView
+                    android:id="@+id/run_goal_value"
+                    style="@style/super_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/run_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/select_start" >
+    </ImageView>
+
+    <LinearLayout
+        android:id="@+id/run_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/run_pause"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0.1dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_pause" />
+
+        <ImageView
+            android:id="@+id/run_exit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/select_stop" />
+    </LinearLayout>
+
+</RelativeLayout>

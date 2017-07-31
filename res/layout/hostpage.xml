@@ -1,0 +1,164 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res/com.ynu.healthyfriendv05"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_gray"
+    tools:context="com.ynu.healthyfriendv05.HostpageActivity" >
+
+    <LinearLayout
+        android:id="@+id/healthy_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/button_bar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0.1dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/exercise"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0.1dp"
+                android:layout_weight="1"
+                android:background="@drawable/select_exercise" />
+
+            <ImageView
+                android:id="@+id/slim"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/select_slim" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_bar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/assistant"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0.1dp"
+                android:layout_weight="1"
+                android:background="@drawable/select_assistant" />
+
+            <ImageView
+                android:id="@+id/setting"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/select_setting" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/healthy_options"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/healthy_state"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <com.ynu.healthyfriendv05.tools.RoundProgressBar2
+                android:id="@+id/weight_index"
+                android:layout_width="160dp"
+                android:layout_height="150dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+            <TableLayout
+                android:id="@+id/healthytip_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/weight_index"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/tip_title"
+                    style="@style/normal_light_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tip_title" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/line" />
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/my_weighttype"
+                        style="@style/little_light_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_weighttype" />
+
+                    <TextView
+                        android:id="@+id/my_weighttype_value"
+                        style="@style/little_light_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/my_exercisetype"
+                        style="@style/little_light_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/exercise_type" />
+
+                    <TextView
+                        android:id="@+id/my_exercisetype_value"
+                        style="@style/little_light_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TextView
+                    android:id="@+id/healthy_tips"
+                    style="@style/little_light_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/line" />
+            </TableLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/personal_information"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <ListView
+                android:id="@+id/personaldetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/listview_dark_border" >
+            </ListView>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

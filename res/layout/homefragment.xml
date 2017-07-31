@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/home_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/home_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0.1dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_back" />
+
+        <ImageView
+            android:id="@+id/searchdata"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/select_searchdata" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/slimtable_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/home_options"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/my_fix_sportstask"
+            style="@style/big_light_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_middle_gray"
+            android:text="@string/fix_sportstask" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/darkline" />
+
+        <ListView
+            android:id="@+id/fix_sportstask_listview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:divider="@color/dark_middle_gray"
+            android:dividerHeight="0.5dp" >
+        </ListView>
+
+        <TextView
+            android:id="@+id/my_new_sportstask"
+            style="@style/big_light_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_middle_gray"
+            android:text="@string/new_sportstask" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/darkline" />
+
+        <ListView
+            android:id="@+id/new_sportstask_listview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:divider="@color/dark_middle_gray"
+            android:dividerHeight="0.5dp" >
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/other_options1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/blank"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0.1dp"
+            android:layout_weight="1"
+            android:background="@drawable/bt_blank_normal" />
+
+        <ImageView
+            android:id="@+id/nextstep"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/select_next" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/other_options1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" >
+
+        <TableLayout
+            android:id="@+id/whole_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:shrinkColumns="0" >
+
+            <TableRow
+                android:paddingBottom="5dp"
+                android:paddingRight="@dimen/activity_horizontal_margin" >
+
+                <TextView
+                    android:id="@+id/username"
+                    style="@style/normal_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/username" />
+
+                <EditText
+                    android:id="@+id/username_input"
+                    style="@style/inputedit_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/please_input" />
+            </TableRow>
+
+            <TableRow
+                android:paddingBottom="5dp"
+                android:paddingRight="@dimen/activity_horizontal_margin" >
+
+                <TextView
+                    android:id="@+id/birthday"
+                    style="@style/normal_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/birthday" />
+
+                <EditText
+                    android:id="@+id/birthday_input"
+                    style="@style/inputedit_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:inputType="none" >
+                </EditText>
+            </TableRow>
+
+            <TableRow android:paddingBottom="5dp" >
+
+                <TextView
+                    android:id="@+id/gender"
+                    style="@style/normal_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender" />
+
+                <RadioGroup
+                    android:id="@+id/gender_rg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/male"
+                        style="@style/normal_dark_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/male" />
+
+                    <RadioButton
+                        android:id="@+id/female"
+                        style="@style/normal_dark_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/female" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow android:paddingBottom="5dp" >
+
+                <TextView
+                    android:id="@+id/weight"
+                    style="@style/normal_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weight" />
+
+                <EditText
+                    android:id="@+id/weight_input"
+                    style="@style/inputnumber_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    android:id="@+id/weight_unit"
+                    style="@style/normal_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weight_unit" />
+            </TableRow>
+
+            <TableRow android:paddingBottom="5dp" >
+
+                <TextView
+                    android:id="@+id/height"
+                    style="@style/normal_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/height" />
+
+                <EditText
+                    android:id="@+id/height_input"
+                    style="@style/inputnumber_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    android:id="@+id/height_unit"
+                    style="@style/normal_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/height_unit" />
+            </TableRow>
+
+            <TableRow android:paddingBottom="5dp" >
+
+                <TextView
+                    android:id="@+id/armlength"
+                    style="@style/normal_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/armlength" />
+
+                <EditText
+                    android:id="@+id/armlength_input"
+                    style="@style/inputnumber_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    android:id="@+id/armlength_unit"
+                    style="@style/normal_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mile_unit" />
+            </TableRow>
+
+            <TableRow android:paddingBottom="5dp" >
+
+                <TextView
+                    android:id="@+id/steplength"
+                    style="@style/normal_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/steplength" />
+
+                <EditText
+                    android:id="@+id/steplength_input"
+                    style="@style/inputnumber_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    android:id="@+id/steplength_unit"
+                    style="@style/normal_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mile_unit" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/exercise_type"
+                    style="@style/normal_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exercise_type" />
+
+                <Spinner
+                    android:id="@+id/type_choose"
+                    style="@style/inputspinner_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/occupation"
+                    style="@style/normal_dark_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blank" />
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

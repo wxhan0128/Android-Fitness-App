@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="exercise_type_list">
+        <item>微量运动  每天运动30分钟</item>
+        <item>轻度运动  每天运动1~2小时</item>
+        <item>中度运动  每天运动2~3小时</item>
+        <item>重度运动  每天运动4~5小时</item>
+    </string-array>
+    <string-array name="package_type_list">
+        <item></item>
+        <item>健身套餐A</item>
+        <item>健身套餐B</item>
+        <item>健身套餐C</item>
+        <item>健身套餐D</item>
+    </string-array>
+
+</resources>
